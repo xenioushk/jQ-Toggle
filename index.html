@@ -1,0 +1,21 @@
+<html>
+    <title>jQuery Simple Toggle Effect</title>
+    <head>
+        <script  type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <div id="clickme">
+            <a href="javascript:void(0)" id="show-me">Click here</a>
+        </div>
+        <img id="book" src="images/jq.gif" alt="" width="100" height="123" style="display: none;border:1px solid green;"/>
+        <div id="message"></div>
+        <script type="text/javascript">
+            $('a#show-me').click(function () {
+                $('#book').toggle(function () {
+                    $('#message').html("Done").css({color: 'Green'});
+                });
+            });
+        </script>
+    </body>
+</html>
